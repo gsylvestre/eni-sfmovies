@@ -37,7 +37,8 @@ const resultsDiv = document.getElementById("results");
 
 //cible et met sous écoute le champs de recherche
 const searchInput = document.getElementById("search-input");
-searchInput.addEventListener("keyup", handleChange);
+//input est un événement qui se déclenche quand la valeur change
+searchInput.addEventListener("input", handleChange);
 
 //cible et met sous écoute le bouton
 const searchButton = document.getElementById("search-button");
