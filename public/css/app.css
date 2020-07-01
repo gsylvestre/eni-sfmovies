@@ -1,0 +1,28 @@
+#results article {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    margin: 10px 0;
+    cursor: pointer;
+    background-color: #222;
+    color: white;
+    padding-right: 10px;
+    max-width: 300px;
+}
+
+#results article:hover {
+    background-color: #000;
+}
+
+#results article img {
+    max-width: 80px;
+    margin-right: 10px;
+}
+
+main {
+    display: flex;
+}
+
+iframe {
+    margin-left: 20px;
+}

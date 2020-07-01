@@ -32,6 +32,11 @@ class Movie
      */
     private $tmdbId;
 
+    /**
+     * @ORM\Column(type="string", length=50, nullable=true)
+     */
+    private $trailerId;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -69,6 +74,18 @@ class Movie
     public function setTmdbId(int $tmdbId): self
     {
         $this->tmdbId = $tmdbId;
+
+        return $this;
+    }
+
+    public function getTrailerId(): ?string
+    {
+        return $this->trailerId;
+    }
+
+    public function setTrailerId(?string $trailerId): self
+    {
+        $this->trailerId = $trailerId;
 
         return $this;
     }
