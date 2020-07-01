@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Movie search with AJAX!{% endblock %}
+
+{% block body %}
+    <h2>Movie search with AJAX!</h2>
+    <div>
+        <input type="search" id="search-input" placeholder="batman">
+        <button id="search-button">OK</button>
+
+        <!-- juste un container pour les résultats chargés en ajax -->
+        <div id="results"></div>
+    </div>
+{% endblock %}
