@@ -2,7 +2,7 @@ console.log("couc");
 
 //affiche l'iframe youtube (déclenchée au clic sur un <article> de film)
 function showTrailer(trailerId) {
-    trainerContainer.innerHTML = `
+    trailerContainer.innerHTML = `
         <iframe width="560" height="315" src="https://www.youtube.com/embed/${trailerId}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;picture-in-picture" allowfullscreen></iframe>
     `;
 }
@@ -14,7 +14,7 @@ function handleChange(evt){
     console.log(keywords);
     if (keywords.length <3){
         //vide les résultats précédents
-        trainerContainer.innerHTML = "";
+        trailerContainer.innerHTML = "";
         resultsDiv.innerHTML = "";
         //ne fait pas la requête ajax du coup
         return;
@@ -48,6 +48,7 @@ function handleChange(evt){
         //met sous écoute du click chacun des films
         resultsDiv.querySelectorAll("article").forEach(function(videoArticle){
             videoArticle.addEventListener("click", function(){
+                videoArticle.style.backgroundColor = "tomato";
                 let trailerId = videoArticle.dataset.trailerId;
                 showTrailer(trailerId);
             })
@@ -58,7 +59,7 @@ function handleChange(evt){
 //cible une seule fois notre div qui contiendra les résultats
 const resultsDiv = document.getElementById("results");
 //et l'éventuel bande annonce...
-const trainerContainer = document.getElementById("trailer-container");
+const trailerContainer = document.getElementById("trailer-container");
 
 //cible et met sous écoute le champs de recherche
 const searchInput = document.getElementById("search-input");

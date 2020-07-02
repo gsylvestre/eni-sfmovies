@@ -23,7 +23,7 @@ class TmdbController extends AbstractController
         $startAtPage = 1;
 
         //on va chercher plusieurs pages à la fois...
-        for($i = $startAtPage; $i <= ($startAtPage+2); $i++) {
+        for($i = $startAtPage; $i <= ($startAtPage+5); $i++) {
             //pour ralentir, au besoin
             //sleep(1);
             //voir fonction ci-dessous
